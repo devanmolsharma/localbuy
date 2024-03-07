@@ -1,0 +1,7 @@
+<%= render partial: "navbar"%>
+<div class='text-center p-4'>
+<a href="/"  class="text-blue-600">All</a> | <a href="/categories">Categories</a>
+</div>
+<div class='p-10'>
+<%= render partial: "category", collection:@categories%>
+</div>

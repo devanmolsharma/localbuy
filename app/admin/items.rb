@@ -6,7 +6,7 @@ ActiveAdmin.register Item do
   # Uncomment all parameters which should be permitted for assignment
   #
 
-  permit_params :name, :price, :description, :image, :category_id, :user_id
+  permit_params :name, :price, :description, :image, :category_id, :user_id,:rating
 
   remove_filter :image_attachment;
   remove_filter :image_blob;
@@ -26,6 +26,7 @@ ActiveAdmin.register Item do
       f.input :name
       f.input :price
       f.input :description
+      f.input :rating
       f.input :category ,include_blank: false, allow_blank: false
       f.input :user ,include_blank: false, allow_blank: false
       f.input :image, as: :file
