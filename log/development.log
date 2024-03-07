@@ -32008,3 +32008,650 @@ Processing by ApplicationController#about as HTML
 Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 9967)
 
 
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:04:47 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 34575)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 35177)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 12:04:49 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 347)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:04:49 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.5ms | Allocations: 419)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 10156)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 10665)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 12:04:56 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms | Allocations: 316)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:04:56 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 9792)
+Completed 200 OK in 8ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 10049)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:04:57 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 12.7ms | Allocations: 16298)
+  Rendered items/index.html.erb within layouts/application (Duration: 18.8ms | Allocations: 21418)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 31084)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 2.1ms | Allocations: 31750)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853/diet.png" for 127.0.0.1 at 2024-03-07 12:04:57 -0600
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853", "filename"=>"diet"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: i2zjra7e9ykec5rz2lugwj412r57 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTg6MDk6NTcuOTM2WiIsInB1ciI6ImJsb2Jfa2V5In19--5db72ea78eeaaefad8cecb780187afc7bb6af125/diet.png)[0m
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTg6MDc6NDcuNzQ0WiIsInB1ciI6ImJsb2Jfa2V5In19--b519e969a5d431767cb15fcbbf24a688cafc8cc2/diet.png" for 127.0.0.1 at 2024-03-07 12:04:57 -0600
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTg6MDk6NTcuOTM2WiIsInB1ciI6ImJsb2Jfa2V5In19--5db72ea78eeaaefad8cecb780187afc7bb6af125/diet.png
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2495)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"diet"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 232)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:04:59 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 9753)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 9983)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:05:27 -0600
+Processing by ApplicationController#about as */*
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.2ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 17159)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 17682)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:05:45 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 9800)
+Completed 200 OK in 8ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 10029)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:09:29 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.8ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 35808)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 36410)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:10:08 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.7ms | Allocations: 426)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 34610)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 35211)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:10:26 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.3ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.7ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 34594)
+Completed 200 OK in 18ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 35195)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:11:17 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 34599)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 35200)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 12:11:27 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 321)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:11:27 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.5ms | Allocations: 422)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 10400)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 10905)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:13:02 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 15.3ms | Allocations: 16233)
+  Rendered items/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 21352)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 30962)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 2.1ms | Allocations: 31627)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:13:02 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 2.1ms | Allocations: 1459)
+  Rendered items/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2100)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 11648)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 11914)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 12:13:02 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:13:02 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 10075)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 10334)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 12:13:33 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:13:33 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 9670)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 9927)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:15:21 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.3ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.8ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 36077)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 37188)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:15:53 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 15.3ms | Allocations: 16276)
+  Rendered items/index.html.erb within layouts/application (Duration: 21.6ms | Allocations: 21580)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 56963)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 2.0ms | Allocations: 58206)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:15:54 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.5ms | Allocations: 419)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 9997)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 10528)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:16:17 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 36120)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms | Allocations: 37231)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:16:18 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 10045)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 10302)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:16:28 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 109)
+  Rendered users/login.html.erb within layouts/application (Duration: 4.5ms | Allocations: 600)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 36022)
+Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 37130)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:16:41 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 35973)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 37081)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:17:37 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.8ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 35992)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 37100)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:17:38 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 10049)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 10306)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:18:00 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 34787)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 35896)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:18:02 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 10033)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 10290)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:18:30 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 34780)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms | Allocations: 35889)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:18:39 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 19.5ms | Allocations: 16277)
+  Rendered items/index.html.erb within layouts/application (Duration: 25.3ms | Allocations: 21581)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 55789)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 2.2ms | Allocations: 57033)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:18:39 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 419)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 10004)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 10535)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:18:46 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.8ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 36000)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 37110)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:18:54 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.9ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 36163)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 37272)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:19:59 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 36020)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 37128)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:20:26 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.3ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.9ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | Allocations: 36005)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms | Allocations: 37114)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:21:52 -0600
+Processing by UsersController#login as */*
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.5ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 12202)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 12581)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:21:53 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 14.6ms | Allocations: 16254)
+  Rendered items/index.html.erb within layouts/application (Duration: 19.9ms | Allocations: 21383)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 31102)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 2.2ms | Allocations: 31769)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:23:00 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 108)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.8ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 35979)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 37089)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:23:09 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 108)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 34933)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 36042)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:23:20 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.9ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 36005)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 37113)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:23:28 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.3ms | Allocations: 108)
+  Rendered users/login.html.erb within layouts/application (Duration: 1.0ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 36025)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 37133)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 12:25:37 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 341)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:25:37 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 108)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.8ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 36081)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms | Allocations: 37155)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:25:37 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 14.5ms | Allocations: 16312)
+  Rendered items/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 21439)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 31166)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 2.0ms | Allocations: 31832)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:25:38 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 2.1ms | Allocations: 1459)
+  Rendered items/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2100)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 11664)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 11931)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:25:38 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 10028)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 10284)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:26:18 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.9ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 36006)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 37116)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:26:26 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 108)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 12.7ms | Allocations: 16277)
+  Rendered items/index.html.erb within layouts/application (Duration: 17.9ms | Allocations: 21582)
+  Rendered layout layouts/application.html.erb (Duration: 38.3ms | Allocations: 56977)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 1.8ms | Allocations: 58220)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:26:27 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.5ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 10408)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 10941)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:26:33 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 108)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.8ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 34787)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 35898)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 12:26:54 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 341)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:26:54 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 109)
+  Rendered users/login.html.erb within layouts/application (Duration: 1.0ms | Allocations: 599)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 34791)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 35864)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:26:54 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 21.7ms | Allocations: 16332)
+  Rendered items/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 21457)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 31449)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 2.0ms | Allocations: 32116)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:26:54 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 9700)
+Completed 200 OK in 9ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 9956)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:27:01 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 108)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 34785)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 35896)
+
+
