@@ -31165,3 +31165,846 @@ Processing by UsersController#login as HTML
 Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 35930)
 
 
+Started GET "/" for 127.0.0.1 at 2024-03-07 09:27:45 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 25.5ms | Allocations: 16243)
+  Rendered items/index.html.erb within layouts/application (Duration: 39.6ms | Allocations: 21367)
+  Rendered layout layouts/application.html.erb (Duration: 62.3ms | Allocations: 32479)
+Completed 200 OK in 65ms (Views: 57.1ms | ActiveRecord: 6.2ms | Allocations: 33143)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853/diet.png" for 127.0.0.1 at 2024-03-07 09:27:46 -0600
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853", "filename"=>"diet"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: i2zjra7e9ykec5rz2lugwj412r57 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTU6MzI6NDYuMDY4WiIsInB1ciI6ImJsb2Jfa2V5In19--a3d8dedd16e2c838b74d3d56b73f113ce29def5e/diet.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTU6MzI6NDYuMDY4WiIsInB1ciI6ImJsb2Jfa2V5In19--a3d8dedd16e2c838b74d3d56b73f113ce29def5e/diet.png
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2154)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTU6MzI6NDYuMDY4WiIsInB1ciI6ImJsb2Jfa2V5In19--a3d8dedd16e2c838b74d3d56b73f113ce29def5e/diet.png" for 127.0.0.1 at 2024-03-07 09:27:46 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"diet"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 674)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2024-03-07 09:43:14 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-03-07 09:43:14 -0600
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 1211)
+
+
+Processing by ItemsController#index as HTML
+Started GET "/admin/login" for 127.0.0.1 at 2024-03-07 09:43:14 -0600
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 120)
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 75.2ms | Allocations: 26057)
+  Rendered items/index.html.erb within layouts/application (Duration: 110.4ms | Allocations: 37207)
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering layout /home/anmolsharma/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/activeadmin-3.2.0/app/views/layouts/active_admin_logged_out.html.erb
+  Rendering /home/anmolsharma/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/activeadmin-3.2.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/anmolsharma/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/activeadmin-3.2.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.8ms | Allocations: 614)
+  Rendered /home/anmolsharma/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/activeadmin-3.2.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 11.7ms | Allocations: 10702)
+  Rendered layout /home/anmolsharma/.asdf/installs/ruby/3.3.0/lib/ruby/gems/3.3.0/gems/activeadmin-3.2.0/app/views/layouts/active_admin_logged_out.html.erb (Duration: 144.6ms | Allocations: 117163)
+Completed 200 OK in 155ms (Views: 147.8ms | ActiveRecord: 1.2ms | Allocations: 127665)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 369.6ms | Allocations: 231969)
+Completed 200 OK in 380ms (Views: 369.6ms | ActiveRecord: 4.4ms | Allocations: 236060)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853/diet.png" for 127.0.0.1 at 2024-03-07 09:43:16 -0600
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853", "filename"=>"diet"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: i2zjra7e9ykec5rz2lugwj412r57 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTU6NDg6MTYuMjQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--d07325c8b1fcf2ab62e9c9565fe84bbd1b74c662/diet.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTU6NDg6MTYuMjQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--d07325c8b1fcf2ab62e9c9565fe84bbd1b74c662/diet.png
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms | Allocations: 3352)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTU6NDg6MTYuMjQ3WiIsInB1ciI6ImJsb2Jfa2V5In19--d07325c8b1fcf2ab62e9c9565fe84bbd1b74c662/diet.png" for 127.0.0.1 at 2024-03-07 09:43:16 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"diet"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/categories" for 127.0.0.1 at 2024-03-07 09:43:27 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/_category.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/categories/_category.html.erb:11
+  Rendered collection of categories/_category.html.erb [1 times] (Duration: 3.3ms | Allocations: 2430)
+  Rendered categories/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 5580)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 15224)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.4ms | Allocations: 15900)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--d1160e8e620d317a3d25bc4d0ad3a97769126910/cow-animal-face-icon.webp" for 127.0.0.1 at 2024-03-07 09:43:27 -0600
+Processing by ActiveStorage::Blobs::RedirectController#show as WEBP
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--d1160e8e620d317a3d25bc4d0ad3a97769126910", "filename"=>"cow-animal-face-icon"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: jp2q5zbl899rnx4xhub2xzawhjj1 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJqcDJxNXpibDg5OXJueDR4aHViMnh6YXdoamoxIiwiZGlzcG9zaXRpb24iOiJhdHRhY2htZW50OyBmaWxlbmFtZT1cImNvdy1hbmltYWwtZmFjZS1pY29uLndlYnBcIjsgZmlsZW5hbWUqPVVURi04Jydjb3ctYW5pbWFsLWZhY2UtaWNvbi53ZWJwIiwiY29udGVudF90eXBlIjoiaW1hZ2Uvd2VicCIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTU6NDg6MjcuNjMwWiIsInB1ciI6ImJsb2Jfa2V5In19--ca4e464daf91f39e80046594e222f13d15a62c9c/cow-animal-face-icon.webp)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJqcDJxNXpibDg5OXJueDR4aHViMnh6YXdoamoxIiwiZGlzcG9zaXRpb24iOiJhdHRhY2htZW50OyBmaWxlbmFtZT1cImNvdy1hbmltYWwtZmFjZS1pY29uLndlYnBcIjsgZmlsZW5hbWUqPVVURi04Jydjb3ctYW5pbWFsLWZhY2UtaWNvbi53ZWJwIiwiY29udGVudF90eXBlIjoiaW1hZ2Uvd2VicCIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTU6NDg6MjcuNjMwWiIsInB1ciI6ImJsb2Jfa2V5In19--ca4e464daf91f39e80046594e222f13d15a62c9c/cow-animal-face-icon.webp
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1350)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJqcDJxNXpibDg5OXJueDR4aHViMnh6YXdoamoxIiwiZGlzcG9zaXRpb24iOiJhdHRhY2htZW50OyBmaWxlbmFtZT1cImNvdy1hbmltYWwtZmFjZS1pY29uLndlYnBcIjsgZmlsZW5hbWUqPVVURi04Jydjb3ctYW5pbWFsLWZhY2UtaWNvbi53ZWJwIiwiY29udGVudF90eXBlIjoiaW1hZ2Uvd2VicCIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTU6NDg6MjcuNjMwWiIsInB1ciI6ImJsb2Jfa2V5In19--ca4e464daf91f39e80046594e222f13d15a62c9c/cow-animal-face-icon.webp" for 127.0.0.1 at 2024-03-07 09:43:27 -0600
+Processing by ActiveStorage::DiskController#show as WEBP
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cow-animal-face-icon"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 159)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 09:43:28 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 2.3ms | Allocations: 1456)
+  Rendered items/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2103)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 11669)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 11942)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 09:43:31 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 366)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 09:43:31 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.5ms | Allocations: 421)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 10003)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 10508)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 09:56:21 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.6ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 35449)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 36559)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 09:59:47 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.8ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 34305)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms | Allocations: 35413)
+
+
+Started GET "/groceries.png" for 127.0.0.1 at 2024-03-07 09:59:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/groceries.png"):
+  
+Started GET "/login" for 127.0.0.1 at 2024-03-07 09:59:48 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 9680)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 9935)
+
+
+Started GET "/groceries.png" for 127.0.0.1 at 2024-03-07 09:59:48 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/groceries.png"):
+  
+Started GET "/login" for 127.0.0.1 at 2024-03-07 09:59:50 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 10078)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 10333)
+
+
+Started GET "/groceries.png" for 127.0.0.1 at 2024-03-07 09:59:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/groceries.png"):
+  
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:00:35 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.3ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.8ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 34787)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 35896)
+
+
+Started GET "/groceries.png" for 127.0.0.1 at 2024-03-07 10:00:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/groceries.png"):
+  
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:00:42 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.3ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.8ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 34787)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 35896)
+
+
+Started GET "/groceries.png" for 127.0.0.1 at 2024-03-07 10:00:42 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/groceries.png"):
+  
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:00:52 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 117)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.8ms | Allocations: 755)
+  Rendered layout layouts/application.html.erb (Duration: 155.5ms | Allocations: 100424)
+Completed 200 OK in 160ms (Views: 157.5ms | ActiveRecord: 0.0ms | Allocations: 103769)
+
+
+Started GET "/groceries.png" for 127.0.0.1 at 2024-03-07 10:00:52 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/groceries.png"):
+  
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:00:55 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 10086)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 10347)
+
+
+Started GET "/groceries.png" for 127.0.0.1 at 2024-03-07 10:00:55 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/groceries.png"):
+  
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:01:11 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 10073)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 10334)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:01:30 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.6ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 35808)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms | Allocations: 36916)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:01:32 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 9799)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 10055)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:01:34 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 9671)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 9926)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:01:48 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 35998)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms | Allocations: 37108)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:02:04 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 36015)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms | Allocations: 37124)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:02:14 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 594)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 36002)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 37107)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:02:25 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 34824)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 35932)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 10:02:32 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 35966)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 37074)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 11:21:40 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 399)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 11:21:40 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 9794)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 10051)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 11:21:43 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 29.3ms | Allocations: 25975)
+  Rendered items/index.html.erb within layouts/application (Duration: 37.7ms | Allocations: 36691)
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | Allocations: 46682)
+Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 2.2ms | Allocations: 48238)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853/diet.png" for 127.0.0.1 at 2024-03-07 11:21:44 -0600
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853", "filename"=>"diet"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: i2zjra7e9ykec5rz2lugwj412r57 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTc6MjY6NDQuNjQyWiIsInB1ciI6ImJsb2Jfa2V5In19--a687cc512028abbccd9d9b100b1db8aed9c71385/diet.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTc6MjY6NDQuNjQyWiIsInB1ciI6ImJsb2Jfa2V5In19--a687cc512028abbccd9d9b100b1db8aed9c71385/diet.png
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2490)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTc6MjY6NDQuNjQyWiIsInB1ciI6ImJsb2Jfa2V5In19--a687cc512028abbccd9d9b100b1db8aed9c71385/diet.png" for 127.0.0.1 at 2024-03-07 11:21:44 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"diet"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/categories" for 127.0.0.1 at 2024-03-07 11:21:45 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/_category.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/categories/_category.html.erb:11
+  Rendered collection of categories/_category.html.erb [1 times] (Duration: 3.4ms | Allocations: 2425)
+  Rendered categories/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 5538)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 15123)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.4ms | Allocations: 15793)
+
+
+Started GET "/categories" for 127.0.0.1 at 2024-03-07 11:21:45 -0600
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/categories/_category.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/categories/_category.html.erb:11
+  Rendered collection of categories/_category.html.erb [1 times] (Duration: 2.2ms | Allocations: 1470)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2114)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 11905)
+Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 0.1ms | Allocations: 12194)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--d1160e8e620d317a3d25bc4d0ad3a97769126910/cow-animal-face-icon.webp" for 127.0.0.1 at 2024-03-07 11:21:46 -0600
+Processing by ActiveStorage::Blobs::RedirectController#show as WEBP
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--d1160e8e620d317a3d25bc4d0ad3a97769126910", "filename"=>"cow-animal-face-icon"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: jp2q5zbl899rnx4xhub2xzawhjj1 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJqcDJxNXpibDg5OXJueDR4aHViMnh6YXdoamoxIiwiZGlzcG9zaXRpb24iOiJhdHRhY2htZW50OyBmaWxlbmFtZT1cImNvdy1hbmltYWwtZmFjZS1pY29uLndlYnBcIjsgZmlsZW5hbWUqPVVURi04Jydjb3ctYW5pbWFsLWZhY2UtaWNvbi53ZWJwIiwiY29udGVudF90eXBlIjoiaW1hZ2Uvd2VicCIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTc6MjY6NDYuNTI0WiIsInB1ciI6ImJsb2Jfa2V5In19--0eceba9b82a3eee494154477d13b334d9c9c16cc/cow-animal-face-icon.webp)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJqcDJxNXpibDg5OXJueDR4aHViMnh6YXdoamoxIiwiZGlzcG9zaXRpb24iOiJhdHRhY2htZW50OyBmaWxlbmFtZT1cImNvdy1hbmltYWwtZmFjZS1pY29uLndlYnBcIjsgZmlsZW5hbWUqPVVURi04Jydjb3ctYW5pbWFsLWZhY2UtaWNvbi53ZWJwIiwiY29udGVudF90eXBlIjoiaW1hZ2Uvd2VicCIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTc6MjY6NDYuNTI0WiIsInB1ciI6ImJsb2Jfa2V5In19--0eceba9b82a3eee494154477d13b334d9c9c16cc/cow-animal-face-icon.webp
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1344)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJqcDJxNXpibDg5OXJueDR4aHViMnh6YXdoamoxIiwiZGlzcG9zaXRpb24iOiJhdHRhY2htZW50OyBmaWxlbmFtZT1cImNvdy1hbmltYWwtZmFjZS1pY29uLndlYnBcIjsgZmlsZW5hbWUqPVVURi04Jydjb3ctYW5pbWFsLWZhY2UtaWNvbi53ZWJwIiwiY29udGVudF90eXBlIjoiaW1hZ2Uvd2VicCIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTc6MjY6NDYuNTI0WiIsInB1ciI6ImJsb2Jfa2V5In19--0eceba9b82a3eee494154477d13b334d9c9c16cc/cow-animal-face-icon.webp" for 127.0.0.1 at 2024-03-07 11:21:46 -0600
+Processing by ActiveStorage::DiskController#show as WEBP
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cow-animal-face-icon"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 160)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 11:21:48 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 2.7ms | Allocations: 1455)
+  Rendered items/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2096)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 11862)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 12129)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 11:21:53 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 11:21:53 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 9667)
+Completed 200 OK in 9ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 9925)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 11:23:16 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 11:23:16 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 9949)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 10207)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 11:51:23 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.9ms | Allocations: 597)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 36010)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms | Allocations: 37119)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:51:29 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/about.html.erb within layouts/application (Duration: 0.2ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 10135)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 10431)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:51:56 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 54.1ms | Allocations: 34606)
+Completed 200 OK in 56ms (Views: 55.6ms | ActiveRecord: 0.0ms | Allocations: 35206)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:52:45 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 34579)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 35179)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:53:29 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 34594)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 35194)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:53:39 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 394)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 34662)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 35262)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:54:00 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 34594)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 35194)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:54:20 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.7ms | Allocations: 394)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 34585)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 35185)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:54:27 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 394)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 34585)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 35185)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:54:35 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 34569)
+Completed 200 OK in 24ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 35169)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:55:59 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 35776)
+Completed 200 OK in 25ms (Views: 25.2ms | ActiveRecord: 0.0ms | Allocations: 36376)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:56:15 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 400)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 34571)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 35171)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:58:18 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 415)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 34604)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 35204)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:58:46 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 34588)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 35188)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 11:59:03 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 18.5ms | Allocations: 15477)
+  Rendered items/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 20047)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 30013)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 1.6ms | Allocations: 30682)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853/diet.png" for 127.0.0.1 at 2024-03-07 11:59:03 -0600
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853", "filename"=>"diet"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: i2zjra7e9ykec5rz2lugwj412r57 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTg6MDQ6MDMuODIzWiIsInB1ciI6ImJsb2Jfa2V5In19--e0da3c226a70b237c2957de6b7e9201049406fee/diet.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTg6MDQ6MDMuODIzWiIsInB1ciI6ImJsb2Jfa2V5In19--e0da3c226a70b237c2957de6b7e9201049406fee/diet.png
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2155)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTg6MDQ6MDMuODIzWiIsInB1ciI6ImJsb2Jfa2V5In19--e0da3c226a70b237c2957de6b7e9201049406fee/diet.png" for 127.0.0.1 at 2024-03-07 11:59:03 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"diet"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 232)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 11:59:05 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 348)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 11:59:05 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.8ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 10039)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 10541)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 11:59:26 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.1ms | Allocations: 108)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 34805)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms | Allocations: 35915)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 11:59:28 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 9954)
+Completed 200 OK in 31ms (Views: 31.1ms | ActiveRecord: 0.0ms | Allocations: 10251)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 11:59:32 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 21.0ms | Allocations: 16304)
+  Rendered items/index.html.erb within layouts/application (Duration: 38.1ms | Allocations: 21441)
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 31157)
+Completed 200 OK in 49ms (Views: 44.6ms | ActiveRecord: 3.0ms | Allocations: 31823)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:01:05 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 34576)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 35178)
+
+
+Started GET "/tree.png" for 127.0.0.1 at 2024-03-07 12:01:05 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/tree.png"):
+  
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:01:07 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 10046)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 10273)
+
+
+Started GET "/tree.png" for 127.0.0.1 at 2024-03-07 12:01:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/tree.png"):
+  
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:02:19 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.2ms | Allocations: 107)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.9ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 34570)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 35170)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:02:47 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 14.9ms | Allocations: 16302)
+  Rendered items/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 21424)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 31402)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 2.3ms | Allocations: 32070)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853/diet.png" for 127.0.0.1 at 2024-03-07 12:02:47 -0600
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NSwicHVyIjoiYmxvYl9pZCJ9fQ==--f9454c6bfd7717036d229bf8a02b337367255853", "filename"=>"diet"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: i2zjra7e9ykec5rz2lugwj412r57 (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTg6MDc6NDcuNzQ0WiIsInB1ciI6ImJsb2Jfa2V5In19--b519e969a5d431767cb15fcbbf24a688cafc8cc2/diet.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTg6MDc6NDcuNzQ0WiIsInB1ciI6ImJsb2Jfa2V5In19--b519e969a5d431767cb15fcbbf24a688cafc8cc2/diet.png
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2145)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJpMnpqcmE3ZTl5a2VjNXJ6Mmx1Z3dqNDEycjU3IiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiZGlldC5wbmdcIjsgZmlsZW5hbWUqPVVURi04JydkaWV0LnBuZyIsImNvbnRlbnRfdHlwZSI6ImltYWdlL3BuZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDMtMDdUMTg6MDc6NDcuNzQ0WiIsInB1ciI6ImJsb2Jfa2V5In19--b519e969a5d431767cb15fcbbf24a688cafc8cc2/diet.png" for 127.0.0.1 at 2024-03-07 12:02:47 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"diet"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 232)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 12:02:48 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:02:48 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.5ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 9993)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 10494)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:02:50 -0600
+Processing by ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering items/index.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:17
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/items/_item.html.erb:18
+  Rendered collection of items/_item.html.erb [1 times] (Duration: 2.2ms | Allocations: 1458)
+  Rendered items/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2099)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 11668)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.1ms | Allocations: 11934)
+
+
+Started GET "/user" for 127.0.0.1 at 2024-03-07 12:02:52 -0600
+Processing by UsersController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-07 12:02:52 -0600
+Processing by UsersController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/login.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered users/login.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 10061)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 10319)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 12:02:54 -0600
+Processing by ApplicationController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering application/about.html.erb within layouts/application
+  Rendered application/_navbar.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered application/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 9737)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 9967)
+
+
