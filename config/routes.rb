@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/user", to: "users#index"
   get "/login", to: "users#login"
   get "/about", to: "application#about"
+  get "/contact", to: "application#contact"
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
