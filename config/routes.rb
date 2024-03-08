@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get "/cat/:category", to: "items#cat"
   get "/user", to: "users#index"
   get "/login", to: "users#login"
+  get "/register", to: "users#register"
+  post "/auth", to: "users#authenticate"
   get "/about", to: "application#about"
   get "/contact", to: "application#contact"
 
