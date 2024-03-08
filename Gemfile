@@ -72,3 +72,5 @@ gem "tailwindcss-rails", "~> 2.3"
 
 gem "activeadmin", "~> 3.2"
 gem "devise", "~> 4.9"
+
+gem "bcrypt", "~> 3.1"
