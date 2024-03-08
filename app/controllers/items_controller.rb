@@ -5,5 +5,6 @@ class ItemsController < ApplicationController
 
     def cat
         @items = Item.where(category:params[:category])
+        @category = Category.find(params[:category])
     end
 end

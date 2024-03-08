@@ -1,7 +1,8 @@
 class User < ApplicationRecord
     has_many :items
     accepts_nested_attributes_for :items
-  validates :password, presence: true
+    has_one_attached :profile_picture
+    validates :password, presence: true
     has_secure_password
 
 
@@ -10,8 +11,8 @@ class User < ApplicationRecord
   end
 
   def self.ransackable_associations(auth_object = nil)
-    ["items"]
+    ["items","profile_picture"]
   end
-  
+
 end
 

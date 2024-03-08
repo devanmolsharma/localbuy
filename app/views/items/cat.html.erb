@@ -1,6 +1,6 @@
-<%= render partial: "navbar"%>
+<%= render partial: "navbar",locals:{current: "home"}%>
 <div class='text-center p-4'>
-<a href="#" class='text-blue-600'>All</a> | <a href="/categories">Categories</a>
+<a href="#" ><%=@category.name%></a> | <a href="/categories" class='text-blue-600'>All Categories</a>
 </div>
 <div class='p-10'>
 <%= render partial: "item", collection:@items%>

@@ -1,17 +1,4 @@
-<%
-=begin%>
- <div class='flex-column text-lg w-[200px] border p-[30px] hover:scale-[1.01] hover:cursor-pointer'>
-<%if (item.image.present?)%>
-<%=image_tag url_for(item.image)%>
-<%else%>
-<img src="https://placehold.co/400">
-<%end%>
-<div><%=item.name%></div>
-<div><%=item.price%></div>
-<div><%=item.description%></div>
-</div> 
-<%
-=end%>
+
 <div class="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
   <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
   <%if (item.image.present?)%>

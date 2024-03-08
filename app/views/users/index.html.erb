@@ -1,3 +1,45 @@
-<%= render partial: "navbar"%>
+<%= render partial: "navbar",locals:{current: "user"}%>
+<div class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
+            <div class="col-span-4 sm:col-span-3">
+                <div class="bg-white shadow rounded-lg p-6">
+                    <div class="flex flex-col items-center">
+                    <%if (@user.profile_picture.valid?)%>
+                        <img src="<%=url_for(@user.profile_picture)%>" class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"/>
+                    <%else%>
+                        <img src="/boy.png" class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"/>
+                    <%end%>
+                        <h1 class="text-xl font-bold"><%= @user.full_name%></h1>
+                        <p class="text-gray-700">LocalBuy User</p>
+                        <div class="mt-6 flex flex-wrap gap-4 justify-center">
+                            <a href="#" class="bg-orange-400 hover:bg-orange-600 text-white py-2 px-4 rounded">Edit</a>
+                            <a href="#" class="bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded">Logout</a>
+                        </div>
+                    </div>
+                    <hr class="my-6 border-t border-gray-300">
+                    <div class="flex flex-col">
+                        <span class="text-gray-700 uppercase font-bold tracking-wider mb-2">Email</span>
+                        <div class='mb-2'><%= @user.email%></div>
+                        <span class="text-gray-700 uppercase font-bold tracking-wider mb-2">Phone Number</span>
+                        <div class='mb-2'><%= @user.phone_number%></div>
+                        <% if (@user.phone_number.nil? || (@user.phone_number.length == 0))%>
+                            <button class="bg-orange-300 hover:bg-orange-400 text-gray-700 py-2 px-4 rounded">Add</button>
+                        <%end%>
+                        <span class="text-gray-700 uppercase font-bold tracking-wider mb-2">Address</span>
+                        <div class='mb-2'><%= @user.address%></div>
+                        <% if (@user.address.nil? || (@user.address.length == 0))%>
+                            <button class="bg-orange-300 hover:bg-orange-400 text-gray-700 py-2 px-4 rounded">Add</button>
+                        <%end%>
 
-<%= @user.full_name%>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-4 sm:col-span-9 h-screen">
+                <div class="bg-white shadow rounded-lg p-6">
+                    <h2 class="text-xl font-bold mb-4">Listings</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
