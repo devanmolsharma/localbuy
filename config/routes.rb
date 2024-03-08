@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/login", to: "users#login"
   get "/register", to: "users#register"
   post "/auth", to: "users#authenticate"
+  post "/create", to: "users#create"
   get "/about", to: "application#about"
   get "/contact", to: "application#contact"
 
