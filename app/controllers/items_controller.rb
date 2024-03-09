@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
     def index
-        @items = Item.all;
+        @items = Item.all.limit(20);
     end
 
     def cat

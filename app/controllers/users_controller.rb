@@ -2,6 +2,7 @@ class UsersController < ApplicationController
     def index
         if(session[:user_id].nil?)
             redirect_to('/login')
+            return;
         end
         @user = User.find(session[:user_id])
     end
@@ -11,6 +12,12 @@ class UsersController < ApplicationController
     end
 
     def register
+
+    end
+
+    def logout
+        session.destroy()
+        redirect_to '/'
 
     end
 
