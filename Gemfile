@@ -74,3 +74,7 @@ gem "activeadmin", "~> 3.2"
 gem "devise", "~> 4.9"
 
 gem "bcrypt", "~> 3.1"
+
+gem "open-uri", "~> 0.4.1"
+
+gem "faker", "~> 3.2"
