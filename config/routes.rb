@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   get "/", to: "items#index"
+  get "/page/:page", to: "items#index"
   get "/categories", to: "categories#index"
   get "/cat/:category", to: "items#cat"
   get "/user", to: "users#index"

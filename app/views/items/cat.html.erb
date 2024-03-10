@@ -2,6 +2,6 @@
 <div class='text-center p-4'>
 <a href="#" ><%=@category.name%></a> | <a href="/categories" class='text-blue-600'>All Categories</a>
 </div>
-<div class='p-10'>
+<div class='p-10 flex flex-wrap'>
 <%= render partial: "item", collection:@items%>
 </div>

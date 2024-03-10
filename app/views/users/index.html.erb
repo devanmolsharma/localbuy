@@ -37,8 +37,10 @@
             </div>
             <div class="col-span-4 sm:col-span-9 h-screen">
                 <div class="bg-white shadow rounded-lg p-6">
-                    <h2 class="text-xl font-bold mb-4">Listings</h2>
-                </div>
+                    <h2 class="text-xl font-bold mb-4"SV >Listings</h2>
+                    <div class='flex flex-wrap scale-[0.8] width-screen h-[90vh] overflow-scroll'>
+<%= render partial: "item", collection:@user.items%>
+</div>
             </div>
         </div>
     </div>

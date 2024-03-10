@@ -1,0 +1,15 @@
+<nav class='items-center text-center' aria-label="Page navigation example">
+  <ul class="inline-flex -space-x-px text-base h-10">
+     <li>
+      <a href="/" class="flex items-center justify-center px-4 h-10 leading-tight text-black bg-white border border-orange-300 hover:bg-orange-200">First</a>
+    </li>
+  <%total.times do |i|%>
+    <li>
+      <a href="/page/<%=i+1%>" class="flex items-center justify-center px-4 h-10 leading-tight text-black bg-white border border-orange-300 hover:bg-orange-200"><%=i+1%></a>
+    </li>
+    <%end%>
+    <li>
+      <a href="/page/<%=total%>" class="flex items-center justify-center px-4 h-10 leading-tight text-black bg-white border border-orange-300 hover:bg-orange-200">Last</a>
+    </li>
+  </ul>
+</nav>
