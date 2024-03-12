@@ -20,6 +20,5 @@ class ItemsController < ApplicationController
     else
         @items = Category.find(params[:cat]).items.where('name like ?',"%#{params[:query]}%")
     end
-    @total = (@items.count / 20).to_i;
     end
 end
