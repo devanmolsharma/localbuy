@@ -1,4 +1,29 @@
 <%= render partial: "navbar",locals:{current: "user"}%>
+
+<script src=".env.js"></script>
+<script src="/openmaps/OpenLayers.js"></script>
+<script>
+    function init(lon,lat) {
+        map = new OpenLayers.Map("basicMap");
+        var mapnik         = new OpenLayers.Layer.OSM();
+        var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+        var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+        var position       = new OpenLayers.LonLat(lon,lat).transform( fromProjection, toProjection);
+        var zoom           = 15; 
+
+        map.addLayer(mapnik);
+        map.setCenter(position, zoom );
+      }
+
+      setTimeout(async () => {
+        let url = 'https://geocode.maps.co/search?q=<%=@user.address.split(',')[0]%>&api_key='+GEOCODE_API_KEY;
+        let res = await fetch(url);
+        let json = await res.json();
+        init(json[0].lon,json[0].lat);
+      }, 1000);
+    </script>
+
+
 <div class="bg-gray-100">
     <div class="container mx-auto py-8">
         <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
@@ -30,6 +55,8 @@
                         <div class='mb-2'><%= @user.address%></div>
                         <% if (@user.address.nil? || (@user.address.length == 0))%>
                             <button class="bg-orange-300 hover:bg-orange-400 text-gray-700 py-2 px-4 rounded">Add</button>
+                            <%else%>
+                            <div id="basicMap" style="height:250px"></div>
                         <%end%>
 
                     </div>
@@ -38,7 +65,7 @@
             <div class="col-span-4 sm:col-span-9 h-screen">
                 <div class="bg-white shadow rounded-lg p-6">
                     <h2 class="text-xl font-bold mb-4"SV >Listings</h2>
-                    <div class='flex flex-wrap scale-[0.8] width-screen h-[90vh] overflow-scroll'>
+                    <div class='flex flex-wrap md:scale-[0.8] width-screen md:h-[90vh] md:overflow-scroll'>
 <%= render partial: "item", collection:@user.items%>
 </div>
             </div>

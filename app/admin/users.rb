@@ -5,7 +5,7 @@ ActiveAdmin.register User do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :full_name, :phone_number, :email, :verified, :address,:profile_picture
+  permit_params :full_name, :phone_number, :email, :verified, :address,:profile_picture,:password,:password_confirmation
   
 
   remove_filter :items
@@ -20,6 +20,8 @@ ActiveAdmin.register User do
       f.input :email
       f.input :verified
       f.input :address
+      f.input :password
+      f.input :password_confirmation
       f.input :profile_picture, as: :file
     end
     f.actions
