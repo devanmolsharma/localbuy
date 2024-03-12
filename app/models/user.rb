@@ -2,7 +2,7 @@ class User < ApplicationRecord
     has_many :items
     accepts_nested_attributes_for :items
     has_one_attached :profile_picture
-    validates :password, presence: true
+    validates :password,:email, presence: true
     has_secure_password
 
 
