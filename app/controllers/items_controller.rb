@@ -13,4 +13,9 @@ class ItemsController < ApplicationController
         @items = Item.where(category:params[:category])
         @category = Category.find(params[:category])
     end
+
+    def find 
+      @items = Item.where('name like ?',"%#{params[:query]}%")
+      @total = (@items.count / 20).to_i;
+    end
 end

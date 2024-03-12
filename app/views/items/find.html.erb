@@ -1,0 +1,10 @@
+<%= render partial: "navbar", locals:{current: "home"}%>
+<div class='text-center p-4'>
+<a href="#">All</a> | <a href="/categories" class='text-blue-600'>Categories</a>
+</div>
+<div class='p-10 flex flex-wrap'>
+<%= render partial: "item", collection:@items%>
+</div>
+
+
+<%=render partial: 'pages', locals:{total:@total}%>
