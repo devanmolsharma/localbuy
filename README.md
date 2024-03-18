@@ -1,53 +1,72 @@
-**LocalBuy**
+# LocalBuy
 
-**Introduction**
+LocalBuy is a Ruby on Rails application for buying and selling groceries locally.
 
-LocalBuy is a Ruby on Rails application designed for facilitating local grocery buying and selling. It provides users with a platform to engage in transactions within their community.
+## Features
 
-**Why LocalBuy?**
+- **User authentication:** Users can sign up, log in, and log out.
+- **Product listings:** Users can create, view, edit, and delete product listings.
+- **Search functionality:** Users can search for products based on various criteria.
+- **Responsive design:** The application is optimized for both desktop and mobile devices.
 
-LocalBuy aims to promote community engagement and support local businesses by providing a convenient and secure platform for buying and selling groceries within the vicinity.
+## Dependencies
 
-**Getting Started**
+LocalBuy relies on the following technologies:
 
-To get started with LocalBuy, follow these detailed steps:
+- Ruby 3.0.1
+- Rails 6.1.4
+- TailwindCss (for styling)
+- Devise (for user authentication)
 
-1. **Installation**:
-    - Ensure you have Ruby 3.0.1 and Rails 6.1.4 installed on your system.
-    - Clone the LocalBuy repository from GitHub: [LocalBuy Repository](https://github.com/localbuy/localbuy.git)
-    - Navigate to the project directory in your terminal.
+## Why LocalBuy?
 
-2. **Dependencies Installation**:
-    - Install necessary gems by running `bundle install`.
-    - Ensure TailwindCss is installed for styling purposes.
-    - Install Devise for user authentication.
+LocalBuy aims to facilitate local commerce for groceries, connecting buyers and sellers within a community.
 
-3. **Database Setup**:
-    - Run `rails db:create` to create the necessary databases.
-    - Run `rails db:migrate` to run migrations.
+## Get Started
 
-4. **Starting the Server**:
-    - Launch the Rails server by running `rails server`.
-    - Access the application in your web browser at `http://localhost:3000`.
+Follow these steps to get LocalBuy up and running on your local machine:
 
-5. **User Authentication**:
-    - Sign up for a new account if you're a new user or log in with existing credentials.
-    - Enjoy the full functionality of LocalBuy.
+1. **Clone the repository:**
+   ```
+   git clone <repository_url>
 
-**Contributing Guide**
+   ```
 
-Contributions to LocalBuy are welcome! If you'd like to contribute, please follow these guidelines:
+2. **Install dependencies:**
+   ```
+   bundle install
+   ```
 
-- Fork the LocalBuy repository on GitHub.
-- Create a new branch for your feature or bug fix.
-- Make your changes and ensure all tests pass.
-- Submit a pull request detailing the changes you've made.
+3. **Set up the database:**
+   ```
+   rails db:create
+   rails db:migrate
+   ```
 
-**TODOs**
+4. **Start the server:**
+   ```
+   rails server
+   ```
 
-- Enhance the user interface for better user experience.
-- Add support for user reviews and ratings.
+5. **Visit the application:**
+   Open your web browser and navigate to `http://localhost:3000`.
 
-**License**
+## Contributing Guide
 
-LocalBuy is licensed under the Apache License. 
+Contributions are welcome! To contribute to LocalBuy, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/my-feature`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature/my-feature`).
+6. Create a new Pull Request.
+
+## TODOS
+
+- Implement advanced search functionality.
+- Enhance user interface for better user experience.
+
+## License
+
+LocalBuy is licensed under the Apache License 2.0. 
