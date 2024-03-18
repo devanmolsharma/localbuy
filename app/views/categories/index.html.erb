@@ -1,4 +1,7 @@
 <%= render partial: "navbar",locals:{current: "home"}%>
+<form onSubmit="location.href = '/cat/find/'+getElementById('search').value">
+<input type='text' id='search' placeholder='search'/>
+</form>
 <div class='text-center p-4'>
 <a href="/"  class="text-blue-600">All</a> | <a href="/categories">Categories</a>
 </div>

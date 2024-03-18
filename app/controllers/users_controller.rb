@@ -7,6 +7,21 @@ class UsersController < ApplicationController
         @user = User.find(session[:user_id])
     end
 
+    def explore
+        @users = User.all()
+    end
+
+
+    def search
+        @users = User.where('full_name LIKE ?',"%#{params[:name]}%")
+    end
+
+
+    def view
+        @user = User.find(params[:user])
+    end
+
+
     def login
 
     end

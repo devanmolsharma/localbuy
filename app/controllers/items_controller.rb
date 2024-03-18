@@ -14,6 +14,10 @@ class ItemsController < ApplicationController
         @category = Category.find(params[:category])
     end
 
+    def view
+        @item = Item.find(params[:item])
+    end
+
     def find 
     if(params[:cat].nil?)
       @items = Item.where('name like ?',"%#{params[:query]}%")
@@ -21,4 +25,7 @@ class ItemsController < ApplicationController
         @items = Category.find(params[:cat]).items.where('name like ?',"%#{params[:query]}%")
     end
     end
+
+
+
 end
