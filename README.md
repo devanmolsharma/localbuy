@@ -28,7 +28,7 @@ Follow these steps to get LocalBuy up and running on your local machine:
 
 1. **Clone the repository:**
    ```
-   git clone <repository_url>
+   git clone https://github.com/devanmolsharma/localbuy
 
    ```
 
